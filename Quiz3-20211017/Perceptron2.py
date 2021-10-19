@@ -1,8 +1,9 @@
 # More information https://github.com/python-engineer/MLfromscratch/blob/master/mlfromscratch/perceptron.py
 import numpy as np
 
+
 class Perceptron2:
-    def __init__(self, learning_rate=0.01, n_iters=20):
+    def __init__(self, learning_rate=0.01, n_iters=8):
         self.lr = learning_rate
         self.n_iters = n_iters
         self.activation_func = self._unit_step_func
@@ -21,7 +22,6 @@ class Perceptron2:
         for _ in range(self.n_iters):
 
             for idx, x_i in enumerate(X):
-
                 linear_output = np.dot(x_i, self.weights) + self.bias
                 y_predicted = self.activation_func(linear_output)
 
