@@ -30,6 +30,5 @@ for name, clf in zip(names, classifiers):
     y_pred = clf.predict(X_test)
     score = f1_score(y_test, y_pred, average="binary")
     score_dict[name] = score
-    # print(name + "= " + str(score) + "\n")
 
 print(sorted(score_dict.items(), key=lambda x: x[1], reverse=True))
