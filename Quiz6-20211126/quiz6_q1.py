@@ -39,9 +39,4 @@ svm.fit(X[tr, :], y[tr])
 preds = svm.predict(X[tst, :])
 print("SVM accuracy:", np.round(100 * accuracy_score(y[tst], preds), 1), "%")
 
-# result
-# No transformation: 89.7%
-# Centering - with mean 90.9%
-# Standardisation - StandardScaler - with std.dev - 94.7%
-# Unit range - MinMaxScaler - 93.7%
-# Normalization of feature vectors - 82.8%
+
